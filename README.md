@@ -8,6 +8,7 @@ You need to have Minikube installed on your machine. Please find [here](minikube
 1. [Create ONOS SDN controller deployment](#dpl-onos)
 2. [Create ONOS SDN controller serivce](#svc-onos)
 3. [Create Mininet deployment](#dpl-mininet)
+4. [Question](#question)
 
 ## Deploy ONOS SDN controller <a name="dpl-onos"></a>
 
@@ -70,6 +71,10 @@ spec:
 ## Deploy Mininet Deployment <a name="dpl-mininet"></a>
 
 ```
+kubectl create -f k8s-depl-mininet.yaml
+```
+
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -90,3 +95,6 @@ spec:
       - name: mininet-cluster
         image: iwaseyusuke/mininet
 ```
+
+## Question <a name="question"></a>
+Once you have the control plane (ONOS SDN Controller), you should be able to configure ONOS to set up rules on the data plane (Mininet). The dataplane can communicate with ONOS through the Kubernetes service. ONOS provides a simple application to allow setting up OpenFlow rules automatically. Please activate this application and test its function by pinging between two hosts.
