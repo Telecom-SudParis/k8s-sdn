@@ -9,8 +9,11 @@ You need to have VirtualBox installed on your machine. Please also **ENABLE** *V
 
 ## Table of contents
 1.1. [Install Minikube on Linux](#install-linux)
+
 1.2. [Install kubectl on Linux](#install-linux-kubectl)
+
 2.1. [Install Minikube on Windows](#install-windows)
+
 2.2. [Install kubectl on Windows](#install-windows-kubectl)
 
 ## Install Minikube on Linux <a name="install-linux"></a>
@@ -18,7 +21,7 @@ Execute the following commands from your terminal
 
 
 
-1/ Download and add the minikube executable script to $PATH (you will need to input your root password during the process). If you haven't install curl please do it first ```sudo apt install curl```
+1/ Download and add the minikube executable script to $PATH (you will need to input your root password during the process). If you haven't install curl please do it first ```sudo apt install curl``` then:
 ```
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 ```
