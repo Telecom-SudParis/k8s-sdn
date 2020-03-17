@@ -22,13 +22,13 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 ```
 minikube start
 ```
-After this command, a VM will be initialized. This may take 5-10 minutes depending on your machine. The VM is set up once you see this output
-
+After this command, a VM will be initialized. This may take 5-10 minutes depending on your machine. The VM is completely set up once you see this output
+![alt text](https://github.com/Telecom-SudParis/k8s-sdn/blob/master/static/output-linux-minikube-start.png "minikube start output Linux")
 3/ Verify the status of the Kubernetes cluster running inside the VM
 ```
 minikube status
 ```
-4/ After you have confirmed whether Minikube is working with your chosen hypervisor, you can continue to use Minikube or you can stop your cluster. To stop your cluster, run:
+4/ After you have confirmed whether Minikube is working, you can continue to use Minikube or you can stop your cluster. To stop your cluster, run:
 ```
 minikube stop
 ```
