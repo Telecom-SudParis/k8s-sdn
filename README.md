@@ -68,3 +68,25 @@ spec:
 ```
 
 ## Deploy Mininet Deployment <a name="dpl-mininet"></a>
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mininet-deployment
+  labels:
+    deployment: mininet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      dataplane: mininet
+  template:
+    metadata:
+      labels:
+        dataplane: mininet
+    spec:
+      containers:
+      - name: mininet-cluster
+        image: iwaseyusuke/mininet
+```
