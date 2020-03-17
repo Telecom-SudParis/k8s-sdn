@@ -51,6 +51,7 @@ minikube start
 ```
 After this command, a VM will be initialized. This may take 5-10 minutes depending on your machine. The VM is completely set up once you see this output
 ![alt text](https://github.com/Telecom-SudParis/k8s-sdn/blob/master/static/output-windows-minikube-start.png "minikube start output Windows")
+
 3/ Verify the status of the Kubernetes cluster running inside the VM
 ```
 minikube status
