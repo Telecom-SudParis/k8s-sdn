@@ -4,7 +4,12 @@ This tutorial will help you to understand the capabilities of Kubernetes in cont
 ## Prerequisite:
 You need to have Minikube installed on your machine. Please find [here](minikube-installation.md) the instruction on how to install Minikube.
 
-## Deploy ONOS SDN controller 
+## Table of contents
+1. [Create ONOS SDN controller deployment](#dpl-onos)
+2. [Create ONOS SDN controller serivce](#svc-onos)
+3. [Create Mininet deployment](#dpl-mininet)
+
+## Deploy ONOS SDN controller <a name="dpl-onos"></a>
 
 ```
 kubectl create -f k8s-depl-onos.yaml
@@ -34,7 +39,7 @@ spec:
 
 ```
 
-## Deploy ONOS SDN controller Service
+## Deploy ONOS SDN controller Service <a name="svc-onos"></a>
 
 ```
 kubectl create -f k8s-svc-onos.yaml
@@ -61,3 +66,5 @@ spec:
     sdn-controller: onos
 
 ```
+
+## Deploy Mininet Deployment <a name="dpl-mininet"></a>
