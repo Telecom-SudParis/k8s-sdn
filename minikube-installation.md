@@ -48,6 +48,7 @@ minikube stop
 ```
 ## Install kubectl on Linux <a name="install-linux-kubectl"></a>
 kubectl is the Command Line Interface (CLI) to access the Kubernetes cluster. 
+
 1/ Download the latest release of kubectl script using curl:
 
 ```
@@ -96,4 +97,4 @@ kubectl is the Command Line Interface (CLI) to access the Kubernetes cluster.
 ```
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/windows/amd64/kubectl.exe
 ```
-2/ If you want to execute kubectl command at any directory, you need to add the binary in to your PATH.
+If you want to execute kubectl command at any directory, you need to add the binary in to your PATH.
