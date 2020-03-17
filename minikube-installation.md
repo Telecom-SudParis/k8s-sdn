@@ -1,11 +1,11 @@
 # MINIKUBE INSTALLATION
 
-Note: This document will help you to install Minikube on your Windows and Linux machine. For the instruction on macOS, please refer to this link https://kubernetes.io/docs/tasks/tools/install-minikube/
+**Note**: This document will help you to install Minikube on your Windows and Linux machine. For the instruction on macOS, please refer to this link https://kubernetes.io/docs/tasks/tools/install-minikube/
 
 Minikube implements a local Kubernetes cluster (consisting of one Master node and one Worker node) on a single virtual machine. Minikube's primary goals are to be the best tool for local Kubernetes application development and to support all Kubernetes features that fit.
 
 ## Prerequisite
-You need to have VirtualBox installed on your machine. Please also **ENABLE** Virtualization and **DISABLE** Secure Boot in the BIOS Settings.
+You need to have VirtualBox installed on your machine. Please also **ENABLE** *Virtualization* and **DISABLE** *Secure Boot* in the BIOS Settings.
 
 ## Table of contents
 1. [Install Minikube on Linux](#install-linux)
@@ -45,12 +45,12 @@ minikube stop
 ```
 https://github.com/kubernetes/minikube/releases/latest/download/minikube-installer.exe
 ```
-2/ Open Windows Command Prompt and run Minikube VM
+2/ After the installation, open Command Prompt (cmd) and run Minikube VM
 ```
 minikube start
 ```
 After this command, a VM will be initialized. This may take 5-10 minutes depending on your machine. The VM is completely set up once you see this output
-![alt text](https://github.com/Telecom-SudParis/k8s-sdn/blob/master/static/output-minikube-start-windows.jpg "minikube start output Windows")
+![alt text](https://github.com/Telecom-SudParis/k8s-sdn/blob/master/static/output-windows-minikube-start.png "minikube start output Windows")
 3/ Verify the status of the Kubernetes cluster running inside the VM
 ```
 minikube status
