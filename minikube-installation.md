@@ -28,9 +28,41 @@ After this command, a VM will be initialized. This may take 5-10 minutes dependi
 ```
 minikube status
 ```
+If your cluster is running, the output from minikube status should be similar to:
+```
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+```
 4/ After you have confirmed whether Minikube is working, you can continue to use Minikube or you can stop your cluster. To stop your cluster, run:
 ```
 minikube stop
 ```
 
 ## Install Minikube on Windows <a name="install-windows"></a>
+1/ Download Minikube installer executable from the following link and install
+```
+https://github.com/kubernetes/minikube/releases/latest/download/minikube-installer.exe
+```
+2/ Open Windows Command Prompt and run Minikube VM
+```
+minikube start
+```
+After this command, a VM will be initialized. This may take 5-10 minutes depending on your machine. The VM is completely set up once you see this output
+![alt text](https://github.com/Telecom-SudParis/k8s-sdn/blob/master/static/output-minikube-start-windows.jpg "minikube start output Windows")
+3/ Verify the status of the Kubernetes cluster running inside the VM
+```
+minikube status
+```
+If your cluster is running, the output from minikube status should be similar to:
+```
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+```
+4/ After you have confirmed whether Minikube is working, you can continue to use Minikube or you can stop your cluster. To stop your cluster, run:
+```
+minikube stop
+```
