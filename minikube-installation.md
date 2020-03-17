@@ -8,10 +8,10 @@ Minikube implements a local Kubernetes cluster (consisting of one Master node an
 You need to have VirtualBox installed on your machine. Please also **ENABLE** *Virtualization* and **DISABLE** *Secure Boot* in the BIOS Settings.
 
 ## Table of contents
-1.1 [Install Minikube on Linux](#install-linux)
-1.2 [Install kubectl on Linux](#install-linux-kubectl)
-2.1 [Install Minikube on Windows](#install-windows)
-2.2 [Install kubectl on Windows](#install-windows-kubectl)
+1.1. [Install Minikube on Linux](#install-linux)
+1.2. [Install kubectl on Linux](#install-linux-kubectl)
+2.1. [Install Minikube on Windows](#install-windows)
+2.2. [Install kubectl on Windows](#install-windows-kubectl)
 
 ## Install Minikube on Linux <a name="install-linux"></a>
 Execute the following commands from your terminal
