@@ -69,31 +69,8 @@ spec:
 ```
 
 ## Deploy Mininet Deployment <a name="dpl-mininet"></a>
-
 ```
-kubectl create -f k8s-depl-mininet.yaml
-```
-
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mininet-deployment
-  labels:
-    deployment: mininet
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      dataplane: mininet
-  template:
-    metadata:
-      labels:
-        dataplane: mininet
-    spec:
-      containers:
-      - name: mininet-cluster
-        image: iwaseyusuke/mininet
+sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=31988  --topo tree,depth=2,fanout=2
 ```
 
 ## Question <a name="question"></a>
