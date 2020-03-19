@@ -53,6 +53,15 @@ kubectl create -f templates/deployment/k8s-depl-gui.yaml
 ```
 
 ## Create Mininet cluster <a name="dpl-mininet"></a>
+For Windows users, please download the Mininet VM at this link https://github.com/mininet/openflow-tutorial/wiki/Installing-Required-Software. Choose to download the VM as follows
+```
+...
+Virtual Machine Image (OVF format, 64-bit, Mininet 2.2.2) (Recommended for most modern hardware and OSes)
+...
+```
+Unzip then import the VM into VirtualBox. Before starting the machine, please add a new Network Adapter with "Attached to: Host-only" with Name will be the same as the one in Minikube VM
+
+For Linux users
 ```
 sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tree,depth=2,fanout=2
 ```
