@@ -5,13 +5,15 @@ This tutorial will help you to understand the capabilities of Kubernetes in cont
 You need to have Minikube installed on your machine. Please find [here](minikube-installation.md) the instruction on how to install Minikube.
 
 ## Table of contents
-1. [Create ONOS SDN controller Deployment](#dpl-onos)
+1. [Create ONOS SDN controller (v2.2.1) Deployment](#dpl-onos-221)
 2. [Create ONOS SDN controller Serivce](#svc-onos)
-3. [Create Mininet cluster](#dpl-mininet)
-4. [Create Forwarding application Deployment](#dpl-fwd)
-5. [Create GUI application Deployment](#dpl-gui)
+3. [Create GUI application (v2.0) Deployment](#dpl-gui-20)
+4. [Create Mininet cluster](#dpl-mininet)
+5. [Upgrade ONOS SDN controller latest version (v2.4.0)](#dpl-onos-latest)
+6. [Upgrade GUI application latest version](#dpl-gui-latest)
+7. [Create Forwarding application Deployment](#dpl-fwd)
 
-## Create ONOS SDN controller (v2.2.1) Deployment <a name="dpl-onos"></a>
+## Create ONOS SDN controller (v2.2.1) Deployment <a name="dpl-onos-2221"></a>
 ```
 ...
       containers:
@@ -25,9 +27,6 @@ You need to have Minikube installed on your machine. Please find [here](minikube
 kubectl create -f templates/deployment/k8s-depl-onos.yaml
 ```
 
-
-
-
 ## Create ONOS SDN controller Serivce <a name="svc-onos"></a>
 
 ```
@@ -36,7 +35,6 @@ kubectl create -f templates/service/k8s-svc-onos.yaml
 ```
 ssh -p 30101 karaf@192.168.99.100
 ```
-
 
 http://192.168.99.100:30181/onos/ui/index.html#/topo
 
@@ -59,10 +57,7 @@ kubectl create -f templates/deployment/k8s-depl-gui.yaml
 sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tree,depth=2,fanout=2
 ```
 
-## Upgrade ONOS SDN controller latest version (v2.4.0)
-```
-kubectl apply -f templates/deployment/k8s-depl-onos.yaml
-```
+## Upgrade ONOS SDN controller latest version (v2.4.0) <a name="dpl-onos-latest"></a>
 
 ```
 ...
@@ -72,11 +67,12 @@ kubectl apply -f templates/deployment/k8s-depl-onos.yaml
         #image: onosproject/onos:2.2.1
 ...
 ```
+```
+kubectl apply -f templates/deployment/k8s-depl-onos.yaml
+```
 
-## Upgrade GUI application latest version
-```
-kubectl apply -f templates/deployment/k8s-depl-gui.yaml
-```
+## Upgrade GUI application latest version <a name="dpl-gui-latest"></a>
+
 ```
 ...
       containers:
@@ -84,6 +80,9 @@ kubectl apply -f templates/deployment/k8s-depl-gui.yaml
         image: tqhuy812/gui-app
         #image: tqhuy812/gui-app:2.0
 ...
+```
+```
+kubectl apply -f templates/deployment/k8s-depl-gui.yaml
 ```
 
 ## Create Forwarding application Deployment <a name="dpl-fwd"></a>
