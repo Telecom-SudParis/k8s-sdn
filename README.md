@@ -30,7 +30,10 @@ ssh -p 30101 karaf@192.168.99.100
 
 http://192.168.99.100:30181/onos/ui/index.html#/topo
 
-
+## Create GUI application Deployment <a name="dpl-gui"></a>
+```
+kubectl create -f deployment/k8s-depl-gui.yaml
+```
 
 ## Create Mininet cluster <a name="dpl-mininet"></a>
 ```
@@ -42,7 +45,3 @@ sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tr
 kubectl create -f deployment/k8s-depl-fwd.yaml
 ```
 
-## Create GUI application Deployment <a name="dpl-gui"></a>
-```
-kubectl create -f deployment/k8s-depl-gui.yaml
-```
