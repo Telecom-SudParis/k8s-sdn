@@ -31,7 +31,11 @@ sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tr
 ```
 
 ## Create Forwarding application Deployment <a name="dpl-fwd"></a>
-
+```
+kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-fwd.yaml
+```
 
 ## Create GUI application Deployment <a name="dpl-gui"></a>
-
+```
+kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-gui.yaml
+```
