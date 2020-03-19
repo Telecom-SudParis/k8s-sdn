@@ -8,7 +8,8 @@ You need to have Minikube installed on your machine. Please find [here](minikube
 1. [Create ONOS SDN controller Deployment](#dpl-onos)
 2. [Create ONOS SDN controller Serivce](#svc-onos)
 3. [Create Mininet cluster](#dpl-mininet)
-4. [Question](#question)
+4. [Create Forwarding application Deployment](#dpl-fwd)
+5. [Create GUI application Deployment](#dpl-gui)
 
 ## Create ONOS SDN controller Deployment <a name="dpl-onos"></a>
 
@@ -28,4 +29,9 @@ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/mas
 ```
 sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tree,depth=2,fanout=2
 ```
+
+## Create Forwarding application Deployment <a name="dpl-fwd"></a>
+
+
+## Create GUI application Deployment <a name="dpl-gui"></a>
 
