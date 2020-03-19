@@ -14,6 +14,13 @@ spec:
       labels:
         dataplane: mininet
     spec:
+      hostNetwork: true
       containers:
       - name: mininet-cluster
         image: iwaseyusuke/mininet
+        #image: ciena/mininet
+        stdin: true 
+        tty: true 
+        securityContext:
+          privileged: true
+        #        command: ["/bin/bash mn --switch ovs --controller remote,ip=192.168.99.100  --topo tree,depth=2,fanout=2"]

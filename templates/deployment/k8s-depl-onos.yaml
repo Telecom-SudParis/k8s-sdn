@@ -17,3 +17,8 @@ spec:
       containers:
       - name: onos-demo
         image: onosproject/onos
+        stdin: true
+        tty: true
+        env:
+        - name: ONOS_APPS
+          value: openflow,ovsdb

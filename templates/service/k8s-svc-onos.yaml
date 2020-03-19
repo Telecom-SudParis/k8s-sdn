@@ -7,12 +7,16 @@ metadata:
 spec:
   type: NodePort
   ports:
+  - name: ssh
+    port: 8101
+    targetPort: 8101
   - name: gui
     port: 8181
     nodePort: 30004
   - name: openflow
     port: 6653
     targetPort: 6653
-    nodePort: 30006
+  externalIPs:
+    - 192.168.99.100
   selector:
     sdn-controller: onos

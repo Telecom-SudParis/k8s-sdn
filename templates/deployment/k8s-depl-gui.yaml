@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gui-deployment
+  labels:
+    deployment: gui-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gui
+  template:
+    metadata:
+      labels:
+        app: gui
+    spec:
+      containers:
+      - name: gui-app
+        image: tqhuy812/gui-app
+        stdin: true 
+        tty: true 
+        env:
+        - name: ONOS_IP
+          value: "onos-ext"

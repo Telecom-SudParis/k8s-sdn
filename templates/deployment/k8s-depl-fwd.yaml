@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fwd-deployment
+  labels:
+    deployment: fwd-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fwd
+  template:
+    metadata:
+      labels:
+        app: fwd
+    spec:
+      containers:
+      - name: fwd-app
+        image: tqhuy812/fwd-app
+        stdin: true
+        tty: true 
