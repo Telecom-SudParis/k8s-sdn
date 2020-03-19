@@ -70,7 +70,7 @@ spec:
 
 ## Deploy Mininet Deployment <a name="dpl-mininet"></a>
 ```
-sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=31988  --topo tree,depth=2,fanout=2
+sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tree,depth=2,fanout=2
 ```
 
 ## Question <a name="question"></a>
