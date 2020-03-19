@@ -14,14 +14,14 @@ You need to have Minikube installed on your machine. Please find [here](minikube
 ## Create ONOS SDN controller Deployment <a name="dpl-onos"></a>
 
 ```
-kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-onos.yaml
+kubectl create -f deployment/k8s-depl-onos.yaml
 ```
 
 
 ## Create ONOS SDN controller Serivce <a name="svc-onos"></a>
 
 ```
-kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/service/k8s-svc-onos.yaml
+kubectl create -f service/k8s-svc-onos.yaml
 ```
 ```
 ssh -p 30101 karaf@192.168.99.100
@@ -39,10 +39,10 @@ sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tr
 
 ## Create Forwarding application Deployment <a name="dpl-fwd"></a>
 ```
-kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-fwd.yaml
+kubectl create -f deployment/k8s-depl-fwd.yaml
 ```
 
 ## Create GUI application Deployment <a name="dpl-gui"></a>
 ```
-kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-gui.yaml
+kubectl create -f deployment/k8s-depl-gui.yaml
 ```
