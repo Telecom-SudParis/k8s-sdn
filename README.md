@@ -73,32 +73,5 @@ spec:
 sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=31988  --topo tree,depth=2,fanout=2
 ```
 
-
-```
-kubectl create -f k8s-depl-mininet.yaml
-```
-
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mininet-deployment
-  labels:
-    deployment: mininet
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      dataplane: mininet
-  template:
-    metadata:
-      labels:
-        dataplane: mininet
-    spec:
-      containers:
-      - name: mininet-cluster
-        image: iwaseyusuke/mininet
-```
-
 ## Question <a name="question"></a>
 Once you have the control plane (ONOS SDN Controller), you should be able to configure ONOS to set up rules on the data plane (Mininet). The dataplane can communicate with ONOS through the Kubernetes service. ONOS provides a simple application to allow setting up OpenFlow rules automatically. Please activate this application and test its function by pinging between two hosts.
