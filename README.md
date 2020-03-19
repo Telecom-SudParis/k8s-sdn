@@ -23,7 +23,7 @@ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/mas
 ```
 kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/service/k8s-svc-onos.yaml
 ```
-
+http://192.168.99.100:30181/onos/ui/index.html#/topo
 
 ## Create Mininet cluster <a name="dpl-mininet"></a>
 ```
