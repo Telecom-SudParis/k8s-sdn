@@ -13,65 +13,19 @@ You need to have Minikube installed on your machine. Please find [here](minikube
 ## Deploy ONOS SDN controller <a name="dpl-onos"></a>
 
 ```
-kubectl create -f k8s-depl-onos.yaml
+kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-onos.yaml
 ```
 
-
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: onos-deployment
-  labels:
-    deployment: sdn-controller
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      sdn-controller: onos
-  template:
-    metadata:
-      labels:
-        sdn-controller: onos
-    spec:
-      containers:
-      - name: onos-demo
-        image: onosproject/onos
-
-```
 
 ## Deploy ONOS SDN controller Service <a name="svc-onos"></a>
 
 ```
-kubectl create -f k8s-svc-onos.yaml
+kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/service/k8s-svc-onos.yaml
 ```
 
-```
-apiVersion: v1
-kind: Service
-metadata:
-  name: onos-ext
-  labels:
-    sdn: onos-ext
-spec:
-  type: NodePort
-  ports:
-  - name: gui
-    port: 8181
-    nodePort: 30004
-  - name: openflow
-    port: 6653
-    targetPort: 6653
-    nodePort: 30006
-  selector:
-    sdn-controller: onos
 
-```
-
-## Deploy Mininet Deployment <a name="dpl-mininet"></a>
+## Deploy Mininet <a name="dpl-mininet"></a>
 ```
 sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tree,depth=2,fanout=2
 ```
 
-## Question <a name="question"></a>
-Once you have the control plane (ONOS SDN Controller), you should be able to configure ONOS to set up rules on the data plane (Mininet). The dataplane can communicate with ONOS through the Kubernetes service. ONOS provides a simple application to allow setting up OpenFlow rules automatically. Please activate this application and test its function by pinging between two hosts.
