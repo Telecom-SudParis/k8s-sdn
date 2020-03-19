@@ -17,6 +17,7 @@ spec:
       containers:
       - name: gui-app
         image: tqhuy812/gui-app
+        #image: tqhuy812/gui-app:2.0
         stdin: true 
         tty: true 
         env:

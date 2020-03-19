@@ -17,6 +17,7 @@ spec:
       containers:
       - name: onos-demo
         image: onosproject/onos
+        #image: onosproject/onos:2.2.1
         stdin: true
         tty: true
         env:
