@@ -10,13 +10,13 @@ spec:
   - name: ssh
     port: 8101
     targetPort: 8101
+    nodePort: 30101
   - name: gui
     port: 8181
-    nodePort: 30004
+    nodePort: 30181
   - name: openflow
     port: 6653
     targetPort: 6653
-  externalIPs:
-    - 192.168.99.100
+    nodePort: 30653
   selector:
     sdn-controller: onos
