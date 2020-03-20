@@ -13,7 +13,7 @@ You need to have Minikube installed on your machine. Please find [here](minikube
 6. [Upgrade GUI application latest version](#dpl-gui-latest)
 7. [Create Forwarding application Deployment](#dpl-fwd)
 
-## Create ONOS SDN controller (v2.2.1) Deployment <a name="dpl-onos-2221"></a>
+## Create ONOS SDN controller (v2.2.1) Deployment <a name="dpl-onos-221"></a>
 ```
 ...
       containers:
@@ -38,7 +38,7 @@ ssh -p 30101 karaf@192.168.99.100
 
 http://192.168.99.100:30181/onos/ui/index.html#/topo
 
-## Create GUI application (v2.0) Deployment <a name="dpl-gui"></a>
+## Create GUI application (v2.0) Deployment <a name="dpl-gui-20"></a>
 ```
 ...
       containers:
