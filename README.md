@@ -35,6 +35,7 @@ kubectl create -f templates/service/k8s-svc-onos.yaml
 ```
 ssh -p 30101 karaf@192.168.99.100
 ```
+The username/password is **karaf/karaf**
 
 http://192.168.99.100:30181/onos/ui/index.html#/topo
 
