@@ -72,7 +72,7 @@ https://github.com/kubernetes/minikube/releases/latest/download/minikube-install
 ```
 minikube start
 ```
-**Note**: In case that the VM asks for username/password, please try with **docker/tcuser**
+**Note**: In case that the VM asks for username/password, please try with **docker/tcuser** or **minikube/minikube**
 
 After this command, a VM will be initialized. This may take 5-10 minutes depending on your machine. The VM is completely set up once you see this output
 ![alt text](https://github.com/Telecom-SudParis/k8s-sdn/blob/master/static/output-windows-minikube-start.png "minikube start output Windows")
