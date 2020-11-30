@@ -4,6 +4,12 @@ This tutorial will help you to understand the capabilities of Kubernetes in cont
 ## Prerequisite:
 You need to have Minikube installed on your machine. Please find [here](minikube-installation.md) the instruction on how to install Minikube.
 
+Make sure to check the IP address of the minikube VM by executing the following commands:
+```
+minikube ip
+```
+By default, the IP address is **192.168.99.100**
+
 ## Table of contents
 1. [Create ONOS SDN controller (v2.2.1) Deployment](#dpl-onos-221)
 2. [Create ONOS SDN controller Serivce](#svc-onos)
