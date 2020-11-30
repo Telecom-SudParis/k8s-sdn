@@ -24,13 +24,13 @@ You need to have Minikube installed on your machine. Please find [here](minikube
 ```
 
 ```
-kubectl create -f templates/deployment/k8s-depl-onos.yaml
+kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-onos.yaml
 ```
 
 ## Create ONOS SDN controller Serivce <a name="svc-onos"></a>
 
 ```
-kubectl create -f templates/service/k8s-svc-onos.yaml
+kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/service/k8s-svc-onos.yaml
 ```
 ```
 ssh -p 30101 karaf@192.168.99.100
@@ -50,7 +50,7 @@ http://192.168.99.100:30181/onos/ui/index.html#/topo
 ```
 
 ```
-kubectl create -f templates/deployment/k8s-depl-gui.yaml
+kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-gui.yaml
 ```
 
 ## Create Mininet cluster <a name="dpl-mininet"></a>
