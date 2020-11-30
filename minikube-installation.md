@@ -23,14 +23,16 @@ Execute the following commands from your terminal
 
 1/ Download and add the minikube executable script to $PATH (you will need to input your root password during the process). If you haven't install curl please do it first ```sudo apt install curl``` then:
 ```
-curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 2/ Run minikube VM
 ```
 minikube start
 ```
 After this command, a VM will be initialized. This may take 5-10 minutes depending on your machine. The VM is completely set up once you see this output
+
 ![alt text](https://github.com/Telecom-SudParis/k8s-sdn/blob/master/static/output-linux-minikube-start.png "minikube start output Linux")
+
 3/ Verify the status of the Kubernetes cluster running inside the VM
 ```
 minikube status
@@ -66,7 +68,7 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 ## Install Minikube on Windows <a name="install-windows"></a>
 1/ Download Minikube installer executable from the following link and install
 ```
-https://github.com/kubernetes/minikube/releases/latest/download/minikube-installer.exe
+https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe
 ```
 2/ After the installation, open Command Prompt (cmd) and run Minikube VM
 ```
@@ -75,6 +77,7 @@ minikube start
 **Note**: In case that the VM asks for username/password, please try with **docker/tcuser** or **minikube/minikube**
 
 After this command, a VM will be initialized. This may take 5-10 minutes depending on your machine. The VM is completely set up once you see this output
+
 ![alt text](https://github.com/Telecom-SudParis/k8s-sdn/blob/master/static/output-windows-minikube-start.png "minikube start output Windows")
 
 3/ Verify the status of the Kubernetes cluster running inside the VM
