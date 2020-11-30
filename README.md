@@ -28,13 +28,21 @@ By default, the IP address is **192.168.99.100**
         image: onosproject/onos:2.2.1
 ...
 ```
+```
+minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-onos.yaml
+```
 
+OR
 ```
 kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-onos.yaml
 ```
 
 ## Create ONOS SDN controller Serivce <a name="svc-onos"></a>
 
+```
+minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/service/k8s-svc-onos.yaml
+```
+OR
 ```
 kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/service/k8s-svc-onos.yaml
 ```
@@ -54,7 +62,10 @@ http://192.168.99.100:30181/onos/ui/index.html#/topo
         image: tqhuy812/gui-app:2.0
 ...
 ```
-
+```
+minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-gui.yaml
+```
+OR
 ```
 kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-gui.yaml
 ```
