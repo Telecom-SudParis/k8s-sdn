@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: topo-deployment
+  labels:
+    deployment: connected-topo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      topo: connected-topo
+  template:
+    metadata:
+      labels:
+        topo: connected-topo
+    spec:
+      containers:
+      - name: connected-topo
+        image: tqhuy812/connected-topo
+        stdin: true 
+        tty: true 
+        env:
+        - name: ONOS_IP
+          value: "onos-ext"
+        volumeMounts:
+        - name: docker-sock
+          mountPath: /var/run/docker.sock
+        securityContext:
+          allowPrivilegeEscalation: true
+      volumes:
+      - name: docker-sock
+        hostPath:
+          path: /var/run/docker.sock
+        
