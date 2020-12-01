@@ -27,6 +27,7 @@ spec:
           mountPath: /var/run/docker.sock
         securityContext:
           allowPrivilegeEscalation: true
+      hostPID: true
       volumes:
       - name: docker-sock
         hostPath:
