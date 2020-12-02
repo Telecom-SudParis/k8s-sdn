@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portstats-deployment
+  labels:
+    deployment: portstats-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portstats
+  template:
+    metadata:
+      labels:
+        app: portstats
+    spec:
+      containers:
+      - name: portstats-app
+        image: tqhuy812/portstats-app
+        stdin: true
+        tty: true
+        env:
+        - name: ONOS_IP
+          value: "onos-ext"
