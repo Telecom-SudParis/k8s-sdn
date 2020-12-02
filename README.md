@@ -18,6 +18,7 @@ By default, the IP address is **192.168.99.100**
 5. [Upgrade ONOS SDN controller latest version (v2.4.0)](#dpl-onos-latest)
 6. [Upgrade GUI application latest version](#dpl-gui-latest)
 7. [Create Forwarding application Deployment](#dpl-fwd)
+8. [Create Port Statistics application Deployment](#dpl-pst)
 
 ## Create ONOS SDN controller (v2.2.1) Deployment <a name="dpl-onos-221"></a>
 ```
@@ -144,3 +145,12 @@ OR
 kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-fwd.yaml
 ```
 
+## Create Port Statistics application Deployment <a name="dpl-pst"></a>
+```
+minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-portstats.yaml
+
+```
+OR
+```
+kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-portstats.yaml
+```
