@@ -98,7 +98,7 @@ c/ Mininet cmd
 ```
 sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tree,depth=2,fanout=2
 ```
-## Upgrade ONOS SDN controller latest version (v2.4.0) <a name="dpl-onos-latest"></a>
+## Upgrade ONOS SDN controller latest version (v2.6.0) <a name="dpl-onos-latest"></a>
 
 ```
 ...
@@ -109,7 +109,11 @@ sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tr
 ...
 ```
 ```
-kubectl apply -f templates/deployment/k8s-depl-onos.yaml
+minikube kubectl -- edit deployment/onos-deployment
+```
+OR
+```
+kubectl edit deployment/onos-deployment
 ```
 
 ## Upgrade GUI application latest version <a name="dpl-gui-latest"></a>
@@ -123,11 +127,20 @@ kubectl apply -f templates/deployment/k8s-depl-onos.yaml
 ...
 ```
 ```
-kubectl apply -f templates/deployment/k8s-depl-gui.yaml
+minikube kubectl -- edit deployment/gui-deployment
+```
+OR
+```
+kubectl edit deployment/gui-deployment
 ```
 
 ## Create Forwarding application Deployment <a name="dpl-fwd"></a>
 ```
-kubectl create -f templates/deployment/k8s-depl-fwd.yaml
+minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-fwd.yaml
+
+```
+OR
+```
+kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-fwd.yaml
 ```
 
