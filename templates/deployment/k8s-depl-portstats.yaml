@@ -22,3 +22,19 @@ spec:
         env:
         - name: ONOS_IP
           value: "onos-ext"
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: portstats-ext
+  labels:
+    sdn: portstats-ext
+spec:
+  type: NodePort
+  ports:
+  - name: rest
+    port: 5000
+    targetPort: 5000
+    nodePort: 30500
+  selector:
+    app: portstats
