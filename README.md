@@ -83,6 +83,7 @@ Virtual Machine Image (OVF format, 64-bit, Mininet 2.2.2) (Recommended for most 
 Unzip then import the VM into VirtualBox. Before starting the machine, please add a new Network Adapter with "Attached to: Host-only" with Name will be the same as the one in Minikube VM
 
 For Linux users, you can start from python executable OR container OR mininet cmd
+
 a/ Python executable
 ```
 curl https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/topo/connected_topo_args.py > connected_topo_args.py;
