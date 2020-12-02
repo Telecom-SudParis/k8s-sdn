@@ -147,10 +147,10 @@ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/mas
 
 ## Create Port Statistics application Deployment <a name="dpl-pst"></a>
 ```
-minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-portstats.yaml
+minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-svc-portstats.yaml
 
 ```
 OR
 ```
-kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-portstats.yaml
+kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-svc-portstats.yaml
 ```
