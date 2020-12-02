@@ -10,6 +10,15 @@ minikube ip
 ```
 By default, the IP address is **192.168.99.100**
 
+Create new namespace (if necessary):
+```
+minikube kubectl -- create namespace dev
+```
+Set this namespace as default
+```
+minikube kubectl -- config set-context minikube  --namespace=“dev“
+```
+
 ## Table of contents
 1. [Create ONOS SDN controller (v2.2.1) Deployment](#dpl-onos-221)
 2. [Create ONOS SDN controller Serivce](#svc-onos)
