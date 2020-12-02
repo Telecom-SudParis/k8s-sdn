@@ -71,7 +71,10 @@ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/mas
 ```
 
 ## Create Mininet cluster <a name="dpl-mininet"></a>
-For Windows users, please download the Mininet VM at this link https://github.com/mininet/openflow-tutorial/wiki/Installing-Required-Software. Choose to download the VM as follows
+For Windows users, please create a Ubuntu 16 or above VM and follow the instructions for Linux user below. You can also reuse the VM in onos-sdn repo.
+
+### Obsolete
+Please download the Mininet VM at this link https://github.com/mininet/openflow-tutorial/wiki/Installing-Required-Software. Choose to download the VM as follows
 ```
 ...
 Virtual Machine Image (OVF format, 64-bit, Mininet 2.2.2) (Recommended for most modern hardware and OSes)
