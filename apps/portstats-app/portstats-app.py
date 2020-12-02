@@ -29,4 +29,4 @@ def home():
         return res_ses.json()
 
 
-app.run(host=0.0.0.0)
+app.run(host='0.0.0.0')
