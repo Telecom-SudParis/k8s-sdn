@@ -16,7 +16,7 @@ minikube kubectl -- create namespace dev
 ```
 Set this namespace as default
 ```
-minikube kubectl -- config set-context minikube  --namespace=“dev“
+minikube kubectl -- config set-context minikube  --namespace=dev
 ```
 
 ## Table of contents
