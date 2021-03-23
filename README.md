@@ -30,7 +30,7 @@ minikube dashboard
 3. [Create GUI application (v1.0) Deployment](#dpl-gui-10)
 4. [Create Mininet cluster](#dpl-mininet)
 5. [Upgrade ONOS SDN controller to a newer version (v2.3.0)](#dpl-onos-latest)
-6. [Upgrade GUI application latest version](#dpl-gui-latest)
+6. [Upgrade GUI application latest version (v2.0)](#dpl-gui-latest)
 7. [Create Forwarding application Deployment](#dpl-fwd)
 8. [Create Port Statistics application Deployment](#dpl-pst)
 
@@ -68,7 +68,7 @@ The username/password is **karaf/karaf**
 
 http://192.168.49.2:30181/onos/ui/index.html#/topo
 
-## Create GUI application (v1.0) Deployment <a name="dpl-gui-20"></a>
+## Create GUI application (v1.0) Deployment <a name="dpl-gui-10"></a>
 ```
 ...
       containers:
@@ -131,7 +131,7 @@ OR
 kubectl edit deployment/onos-deployment
 ```
 
-## Upgrade GUI application latest version <a name="dpl-gui-latest"></a>
+## Upgrade GUI application latest version (v2.0) <a name="dpl-gui-latest"></a>
 
 ```
 ...
