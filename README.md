@@ -27,7 +27,7 @@ minikube dashboard
 ## Table of contents
 1. [Create ONOS SDN controller (v2.2.1) Deployment](#dpl-onos-221)
 2. [Create ONOS SDN controller Serivce](#svc-onos)
-3. [Create GUI application (v2.0) Deployment](#dpl-gui-20)
+3. [Create GUI application (v1.0) Deployment](#dpl-gui-10)
 4. [Create Mininet cluster](#dpl-mininet)
 5. [Upgrade ONOS SDN controller to a newer version (v2.3.0)](#dpl-onos-latest)
 6. [Upgrade GUI application latest version](#dpl-gui-latest)
@@ -68,13 +68,13 @@ The username/password is **karaf/karaf**
 
 http://192.168.49.2:30181/onos/ui/index.html#/topo
 
-## Create GUI application (v2.0) Deployment <a name="dpl-gui-20"></a>
+## Create GUI application (v1.0) Deployment <a name="dpl-gui-20"></a>
 ```
 ...
       containers:
       - name: gui-app
-        #image: tqhuy812/gui-app
-        image: tqhuy812/gui-app:2.0
+        #image: tqhuy812/gui-app:latest
+        image: tqhuy812/gui-app:1.0
 ...
 ```
 ```
@@ -137,8 +137,8 @@ kubectl edit deployment/onos-deployment
 ...
       containers:
       - name: gui-app
-        image: tqhuy812/gui-app
-        #image: tqhuy812/gui-app:2.0
+        image: tqhuy812/gui-app:latest
+        #image: tqhuy812/gui-app:1.0
 ...
 ```
 ```
