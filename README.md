@@ -8,7 +8,7 @@ Make sure to check the IP address of the minikube VM by executing the following 
 ```
 minikube ip
 ```
-By default, the IP address is **192.168.99.100**
+By default, the IP address is **192.168.49.2** or **192.168.99.100**
 
 Create new namespace (if necessary):
 ```
@@ -62,11 +62,11 @@ OR
 kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/service/k8s-svc-onos.yaml
 ```
 ```
-ssh -p 30101 karaf@192.168.99.100
+ssh -p 30101 karaf@192.168.49.2
 ```
 The username/password is **karaf/karaf**
 
-http://192.168.99.100:30181/onos/ui/index.html#/topo
+http://192.168.49.2:30181/onos/ui/index.html#/topo
 
 ## Create GUI application (v2.0) Deployment <a name="dpl-gui-20"></a>
 ```
@@ -103,7 +103,7 @@ a/ Python executable
 ```
 curl https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/topo/connected_topo_args.py > connected_topo_args.py;
 sudo mn -c;
-sudo python connected_topo_args.py 192.168.99.100 30653
+sudo python connected_topo_args.py 192.168.49.2 30653
 ```
 b/ Container
 ```
