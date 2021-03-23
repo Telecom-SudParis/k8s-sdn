@@ -19,6 +19,11 @@ Set this namespace as default
 minikube kubectl -- config set-context minikube  --namespace=dev
 ```
 
+To enable Kubernetes Dashboard, enter the command below in another terminal:
+```
+minikube dashboard
+```
+
 ## Table of contents
 1. [Create ONOS SDN controller (v2.2.1) Deployment](#dpl-onos-221)
 2. [Create ONOS SDN controller Serivce](#svc-onos)
