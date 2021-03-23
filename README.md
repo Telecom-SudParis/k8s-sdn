@@ -29,7 +29,7 @@ minikube dashboard
 2. [Create ONOS SDN controller Serivce](#svc-onos)
 3. [Create GUI application (v2.0) Deployment](#dpl-gui-20)
 4. [Create Mininet cluster](#dpl-mininet)
-5. [Upgrade ONOS SDN controller latest version (v2.4.0)](#dpl-onos-latest)
+5. [Upgrade ONOS SDN controller to a newer version (v2.4.0)](#dpl-onos-latest)
 6. [Upgrade GUI application latest version](#dpl-gui-latest)
 7. [Create Forwarding application Deployment](#dpl-fwd)
 8. [Create Port Statistics application Deployment](#dpl-pst)
@@ -113,13 +113,13 @@ c/ Mininet cmd
 ```
 sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tree,depth=2,fanout=2
 ```
-## Upgrade ONOS SDN controller latest version (v2.6.0) <a name="dpl-onos-latest"></a>
+## Upgrade ONOS SDN controller to a newer version (v2.4.0) <a name="dpl-onos-latest"></a>
 
 ```
 ...
       containers:
       - name: onos-demo
-        image: onosproject/onos
+        image: onosproject/onos:2.4.0
         #image: onosproject/onos:2.2.1
 ...
 ```
