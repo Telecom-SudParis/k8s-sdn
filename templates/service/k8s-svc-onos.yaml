@@ -7,7 +7,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - name: ssh
+  - name: cli
     port: 8101
     targetPort: 8101
     nodePort: 30101
