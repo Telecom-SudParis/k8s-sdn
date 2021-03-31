@@ -11,9 +11,6 @@ spec:
     port: 8101
     targetPort: 8101
     nodePort: 30101
-  - name: gui
-    port: 8181
-    nodePort: 30181
   - name: openflow
     port: 6653
     targetPort: 6653
