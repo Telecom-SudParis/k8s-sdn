@@ -27,8 +27,8 @@ minikube dashboard
 ## Table of contents
 1. [Create ONOS SDN controller (v2.2.1) Deployment](#dpl-onos-221)
 2. [Create ONOS SDN controller Serivce](#svc-onos)
-3. [Create GUI application (v1.0) Deployment](#dpl-gui-10)
-4. [Create Mininet cluster](#dpl-mininet)
+3. [Create Mininet cluster](#dpl-mininet)
+4. [Create GUI application (v1.0) Deployment](#dpl-gui-10)
 5. [Upgrade ONOS SDN controller to a newer version (v2.5.0)](#dpl-onos-latest)
 6. [Upgrade GUI application latest version (v2.0)](#dpl-gui-latest)
 7. [Create Forwarding application Deployment](#dpl-fwd)
