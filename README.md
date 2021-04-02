@@ -112,7 +112,7 @@ $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/m
 
 
 
-For Linux users, you can start from python executable OR container OR mininet cmd
+For Linux users, you can start from python executable (recommended) OR container OR mininet cmd
 
 a/ Python executable
 ```
