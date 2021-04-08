@@ -78,6 +78,7 @@ Once you run the **minikube start** command on the host machine (ONOS Tutorial),
 
 
 ## Create ONOS SDN controller (v2.2.1) Deployment <a name="dpl-onos-221"></a>
+Please make sure the following content is specified in the Deployment YAML file templates/deployment/k8s-depl-onos.yaml. In YAML, **hashtag sign (#)** is used to comment out the text.
 ```
 ...
       containers:
@@ -86,6 +87,8 @@ Once you run the **minikube start** command on the host machine (ONOS Tutorial),
         image: onosproject/onos:2.2.1
 ...
 ```
+Then you can copy the whole content to K8s dashboard
+OR
 ```
 $ minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-onos.yaml
 ```
@@ -96,7 +99,8 @@ $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/m
 ```
 
 ## Create ONOS SDN controller Serivce <a name="svc-onos"></a>
-
+Copy the content from templates/service/k8s-svc-onos.yaml to K8s dashboard
+OR
 ```
 $ minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/service/k8s-svc-onos.yaml
 ```
@@ -104,14 +108,18 @@ OR
 ```
 $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/service/k8s-svc-onos.yaml
 ```
+
+**a) Verify that you can access the ONOS prompt via SSH**
 ```
 $ ssh -p 30101 karaf@192.168.49.2
 ```
 The username/password is **karaf/karaf**
 
+**b) Verify that you can access the ONOS GUI**
 http://192.168.49.2:30181/onos/ui/index.html#/topo
 
 ## Create GUI application (v1.0) Deployment <a name="dpl-gui-10"></a>
+Please make sure the following content is specified in the Deployment YAML file templates/deployment/k8s-depl-gui.yaml. Then you can copy the whole content to K8s dashboard
 ```
 ...
       containers:
@@ -120,6 +128,7 @@ http://192.168.49.2:30181/onos/ui/index.html#/topo
         image: tqhuy812/gui-app:1.0
 ...
 ```
+OR
 ```
 $ minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-gui.yaml
 ```
@@ -130,9 +139,7 @@ $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/m
 
 ## Create Mininet cluster <a name="dpl-mininet"></a>
 
-
-
-For Linux users, you can start from python executable (recommended) OR container OR mininet cmd
+You can start the Mininet cluster from either python executable (recommended) OR container OR mininet cmd
 
 a/ Python executable
 ```
@@ -151,15 +158,15 @@ c/ Mininet cmd
 ```
 
 ## Upgrade ONOS SDN controller to a newer version (v2.5.0) <a name="dpl-onos-latest"></a>
-
+Modify the image version from **2.2.1** to **2.5.0** in the onos Deployment template on the Dashboard
 ```
 ...
       containers:
       - name: onos-demo
         image: onosproject/onos:2.5.0
-        #image: onosproject/onos:2.2.1
 ...
 ```
+OR modify via command-line interface
 ```
 $ minikube kubectl -- edit deployment/onos-deployment
 ```
@@ -167,17 +174,20 @@ OR
 ```
 $ kubectl edit deployment/onos-deployment
 ```
+**Verify that the ONOS version has been changed on the upper left corner of the GUI**
 
 ## Upgrade GUI application latest version (v2.0) <a name="dpl-gui-latest"></a>
+
+Modify the image version from **1.0** to **2.0** in the gui Deployment template on the Dashboard
 
 ```
 ...
       containers:
       - name: gui-app
-        image: tqhuy812/gui-app:latest
-        #image: tqhuy812/gui-app:1.0
+        image: tqhuy812/gui-app:2.0
 ...
 ```
+OR modify via command-line interface
 ```
 $ minikube kubectl -- edit deployment/gui-deployment
 ```
@@ -187,6 +197,8 @@ $ kubectl edit deployment/gui-deployment
 ```
 
 ## Create Forwarding application Deployment <a name="dpl-fwd"></a>
+Copy the content from templates/deployment/k8s-depl-fwd.yaml to K8s dashboard
+OR
 ```
 $ minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-fwd.yaml
 
@@ -195,8 +207,11 @@ OR
 ```
 $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-fwd.yaml
 ```
+**Verify that you can perform pingall command on the Mininet cluster**
 
 ## Create Port Statistics application Deployment <a name="dpl-pst"></a>
+Copy the content from templates/deployment/k8s-depl-svc-portstats.yaml to K8s dashboard
+OR
 ```
 $ minikube kubectl -- create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-svc-portstats.yaml
 
@@ -205,3 +220,4 @@ OR
 ```
 $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-svc-portstats.yaml
 ```
+**Verify that you can access the Port Stats web via this link 192.168.49.2:30500**
