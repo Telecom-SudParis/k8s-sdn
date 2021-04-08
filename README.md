@@ -59,6 +59,7 @@ $ minikube dashboard
 6. [Upgrade GUI application latest version (v2.0)](#dpl-gui-latest)
 7. [Create Forwarding application Deployment](#dpl-fwd)
 8. [Create Port Statistics application Deployment](#dpl-pst)
+9. [Question?](#question)
 
 ## How to create K8s components (i.e. Deployment, Service) <a name="how-to"></a>
 In Kubernetes, you specify your requirement to create K8s components in YAML files. Then, you need to send this file to K8s API Server to execute accordingly by using either one of the following ways:
@@ -220,4 +221,13 @@ OR
 ```
 $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-svc-portstats.yaml
 ```
-**Verify that you can access the Port Stats web via this link <minikube_ip>:30500**
+**Verify that you can access the Port Stats web via this link http://192.168.49.2:30500** 
+
+## Question? <a name="question"></a>
+1/ Access the Port Stats web app, then take the screenshot of the current number of packets.
+
+2/ Go back to Mininet and perform the pingall several times
+
+3/ Wait a few minutes, refresh the Port Stats webpage, then take another screenshot on the updated packets
+
+4/ Provide your TWO screenshots
