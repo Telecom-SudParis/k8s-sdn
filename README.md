@@ -60,16 +60,21 @@ $ minikube dashboard
 8. [Create Port Statistics application Deployment](#dpl-pst)
 
 ## How to create K8s components (i.e. Deployment, Service) <a name="how-to"></a>
+In Kubernetes, you specify your requirement to create K8s components in YAML files. Then, you need to send this file to K8s API Server to execute accordingly by using either one of the following ways:
 
-You can create K8s components (i.e. Deployment, Service, etc.) by using either one of the following ways:
 ### a) Using K8s Dashboard (recommended)
+The most convenient way to create a k8s component is to copy the content of the YAML file to k8s Dashboard then upload it. In this repo, the content for Deployment and Service creation can be found in /templates/deployment/ or /templates/service/
 
-![Alt text](https://user-images.githubusercontent.com/15526152/77160326-64b6b680-6aa7-11ea-80d4-81522bef8692.png?raw=true)
+![Deployment by Dashboard](https://user-images.githubusercontent.com/15526152/77160326-64b6b680-6aa7-11ea-80d4-81522bef8692.png?raw=true)
 
 ### b) Using minikube commmand (apply for k8s cluster running by minikube ONLY)
+Once you run the **minikube start** command on the host machine (ONOS Tutorial), it initiates the Minikube VM and deploy a k8s cluster inside. 
+
+**minikube*** is a client command-line interface which allows you to interact with the k8s cluster deployed by Minikube. It includes commands to control both the Minikube VM and the K8s cluster.
 
 
 ### c) Using kubectl command (apply for all)
+**kubectl** is a client command-line interface which allows you to interact with the any k8s cluster (either deployed by Minikube, Rancher, Kubespray, etc.). 
 
 
 ## Create ONOS SDN controller (v2.2.1) Deployment <a name="dpl-onos-221"></a>
