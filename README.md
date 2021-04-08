@@ -139,7 +139,7 @@ http://<minikube_ip>:30181/onos/ui/index.html#/topo
 
 ## Create Mininet cluster <a name="dpl-mininet"></a>
 
-You can start the Mininet cluster from either python executable (recommended) OR container OR mininet cmd
+You can start the Mininet cluster from either python executable (recommended) OR container OR mininet cmd. Replace the IP address **192.168.49.2** with the **<minikube_ip>** if they are different.
 
 a/ Python executable
 ```
@@ -149,12 +149,12 @@ a/ Python executable
 ```
 b/ Container
 ```
-# docker run --name containernet -it --rm --privileged --pid='host' -v /var/run/docker.sock:/var/run/docker.sock -e ONOS_IP=192.168.99.100 -e ONOS_PORT=30653 --net=host connected-topo
+# docker run --name containernet -it --rm --privileged --pid='host' -v /var/run/docker.sock:/var/run/docker.sock -e ONOS_IP=192.168.49.2 -e ONOS_PORT=30653 --net=host connected-topo
 ```
 c/ Mininet cmd
 ```
 # mn -c
-# mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tree,depth=2,fanout=2
+# mn --switch ovs --controller remote,ip=192.168.49.2,port=30653  --topo tree,depth=2,fanout=2
 ```
 
 ## Upgrade ONOS SDN controller to a newer version (v2.5.0) <a name="dpl-onos-latest"></a>
