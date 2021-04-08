@@ -27,8 +27,6 @@ Super user terminal
 #
 ```
 
-You need to have Minikube installed on your machine. Please find [here](minikube-installation.md) the instruction on how to install Minikube.
-
 Make sure to check the IP address of the minikube VM by executing the following commands:
 ```
 minikube ip
