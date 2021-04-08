@@ -64,7 +64,7 @@ $ minikube dashboard
 You can create K8s components (i.e. Deployment, Service, etc.) by using either one of the following ways:
 ### a) Using K8s Dashboard (recommended)
 
-!(https://user-images.githubusercontent.com/15526152/77160326-64b6b680-6aa7-11ea-80d4-81522bef8692.png?raw=true)
+![Alt text](https://user-images.githubusercontent.com/15526152/77160326-64b6b680-6aa7-11ea-80d4-81522bef8692.png?raw=true)
 
 ### b) Using minikube commmand (apply for k8s cluster running by minikube ONLY)
 
