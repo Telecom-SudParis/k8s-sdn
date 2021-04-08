@@ -2,6 +2,9 @@
 This tutorial will help you to understand the capabilities of Kubernetes in container orchestration and how to use its functions in practice.
 
 ## Prerequisite:
+
+**
+
 You need to be able to run the onos-minikube VM (~ 6Gb), which can be downloaded from this link https://drive.google.com/file/d/1sLxxDjChSgHRIyUOTr13hVzuLc80fMGL/view?usp=sharing
 
 ONOS prompt
@@ -109,14 +112,12 @@ OR
 $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/service/k8s-svc-onos.yaml
 ```
 
-**a) Verify that you can access the ONOS prompt via SSH**
+**Verify that you can access the ONOS prompt via SSH**
 ```
-$ ssh -p 30101 karaf@192.168.49.2
+$ ssh -p 30101 karaf@<minikube_ip>
 ```
 The username/password is **karaf/karaf**
 
-**b) Verify that you can access the ONOS GUI**
-http://192.168.49.2:30181/onos/ui/index.html#/topo
 
 ## Create GUI application (v1.0) Deployment <a name="dpl-gui-10"></a>
 Please make sure the following content is specified in the Deployment YAML file templates/deployment/k8s-depl-gui.yaml. Then you can copy the whole content to K8s dashboard
@@ -124,7 +125,6 @@ Please make sure the following content is specified in the Deployment YAML file 
 ...
       containers:
       - name: gui-app
-        #image: tqhuy812/gui-app:latest
         image: tqhuy812/gui-app:1.0
 ...
 ```
@@ -136,6 +136,8 @@ OR
 ```
 $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-gui.yaml
 ```
+**Verify that you can access the ONOS GUI**
+http://<minikube_ip>:30181/onos/ui/index.html#/topo
 
 ## Create Mininet cluster <a name="dpl-mininet"></a>
 
@@ -220,4 +222,4 @@ OR
 ```
 $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-svc-portstats.yaml
 ```
-**Verify that you can access the Port Stats web via this link 192.168.49.2:30500**
+**Verify that you can access the Port Stats web via this link <minikube_ip>:30500**
