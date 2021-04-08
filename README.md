@@ -136,9 +136,9 @@ For Linux users, you can start from python executable (recommended) OR container
 
 a/ Python executable
 ```
-$ curl https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/topo/connected_topo_args.py > connected_topo_args.py
-$ sudo mn -c
-$ sudo python connected_topo_args.py 192.168.49.2 30653
+# curl https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/topo/connected_topo_args.py > connected_topo_args.py
+# mn -c
+# python connected_topo_args.py 192.168.49.2 30653
 ```
 b/ Container
 ```
@@ -146,16 +146,9 @@ b/ Container
 ```
 c/ Mininet cmd
 ```
-$ sudo mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tree,depth=2,fanout=2
+# mn -c
+# mn --switch ovs --controller remote,ip=192.168.99.100,port=30653  --topo tree,depth=2,fanout=2
 ```
-### Obsolete
-Please download the Mininet VM at this link https://github.com/mininet/openflow-tutorial/wiki/Installing-Required-Software. Choose to download the VM as follows
-```
-...
-Virtual Machine Image (OVF format, 64-bit, Mininet 2.2.2) (Recommended for most modern hardware and OSes)
-...
-```
-Unzip then import the VM into VirtualBox. Before starting the machine, please add a new Network Adapter with "Attached to: Host-only" with Name will be the same as the one in Minikube VM
 
 ## Upgrade ONOS SDN controller to a newer version (v2.5.0) <a name="dpl-onos-latest"></a>
 
