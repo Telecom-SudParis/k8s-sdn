@@ -12,7 +12,7 @@ ONOS prompt
 onos>
 ```
 
-Mininet promt
+Mininet prompt
 ```
 mininet>
 ```
