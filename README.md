@@ -2,7 +2,6 @@
 This tutorial will help you to understand the capabilities of Kubernetes in container orchestration and how to use its functions in practice.
 
 ## Prerequisite:
-## Prerequisite:
 You need to be able to run the onos-minikube VM (~ 6Gb), which can be downloaded from this link https://drive.google.com/file/d/1sLxxDjChSgHRIyUOTr13hVzuLc80fMGL/view?usp=sharing
 
 ONOS prompt
@@ -47,7 +46,10 @@ To enable Kubernetes Dashboard, enter the command below in another terminal:
 $ minikube dashboard
 ```
 
+
+
 ## Table of contents
+0. [How to create K8s components (i.e. Deployment, Service)](#how-to)
 1. [Create ONOS SDN controller (v2.2.1) Deployment](#dpl-onos-221)
 2. [Create ONOS SDN controller Serivce](#svc-onos)
 3. [Create Mininet cluster](#dpl-mininet)
@@ -56,6 +58,19 @@ $ minikube dashboard
 6. [Upgrade GUI application latest version (v2.0)](#dpl-gui-latest)
 7. [Create Forwarding application Deployment](#dpl-fwd)
 8. [Create Port Statistics application Deployment](#dpl-pst)
+
+## How to create K8s components (i.e. Deployment, Service) <a name="how-to"></a>
+
+You can create K8s components (i.e. Deployment, Service, etc.) by using either one of the following ways:
+### a) Using K8s Dashboard (recommended)
+
+https://user-images.githubusercontent.com/15526152/77160326-64b6b680-6aa7-11ea-80d4-81522bef8692.png
+
+### b) Using minikube commmand (apply for k8s cluster running by minikube ONLY)
+
+
+### c) Using kubectl command (apply for all)
+
 
 ## Create ONOS SDN controller (v2.2.1) Deployment <a name="dpl-onos-221"></a>
 ```
