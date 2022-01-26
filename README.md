@@ -5,7 +5,7 @@ This tutorial will help you to understand the capabilities of Kubernetes in cont
 
 **TO AVOID LOW DISK SPACE ISSUE, PLEASE RESTART YOUR VM ONCE YOU HAVE FINISHED YOUR SDN TUTORIAL**
 
-You need to be able to run the onos-minikube VM (~ 6Gb), which can be downloaded from this link https://drive.google.com/file/d/1sLxxDjChSgHRIyUOTr13hVzuLc80fMGL/view?usp=sharing
+You need to be able to run the onos-minikube VM (~ 6Gb), which can be downloaded from this link https://drive.google.com/file/d/1YdBudFsxGDuLT-P8Phf3sI0dGd_sH4mj/view?usp=sharing
 
 ONOS prompt
 ```
