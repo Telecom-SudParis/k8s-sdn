@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 #ONOS_IP = os.getenv("ONOS_IP", "127.0.0.1")
-ONOS_IP = os.getenv("ONOS_IP", "172.17.0.5")
+ONOS_IP = os.getenv("ONOS_IP", "172.17.0.2")
 ONOS_PORT = int(os.getenv("ONOS_PORT", 8181))
 PORT_STATS_URL = "http://" + ONOS_IP + ":" + str(ONOS_PORT) +"/onos/v1/statistics/ports"
 
