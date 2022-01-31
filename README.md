@@ -70,9 +70,9 @@ The most convenient way to create a k8s component is to copy the content of the 
 ![Deployment by Dashboard](https://user-images.githubusercontent.com/15526152/77160326-64b6b680-6aa7-11ea-80d4-81522bef8692.png?raw=true)
 
 ### b) Using minikube commmand (apply for k8s cluster running in minikube ONLY)
-Once you run the **minikube start** command on the host machine (ONOS Tutorial), it initiates the Minikube VM and deploy a k8s cluster inside. 
+Once you run the **minikube start** command on the host machine (ONOS Tutorial), it initiates the Minikube container and deploy a k8s cluster inside. 
 
-**minikube*** is a client command-line interface which allows you to interact with the k8s cluster deployed by Minikube. It includes commands to control both the Minikube VM and the K8s cluster.
+**minikube** is a client command-line interface which allows you to interact with the k8s cluster deployed by Minikube. It includes commands to control both the Minikube container and the K8s cluster.
 
 
 ### c) Using kubectl command (apply for all)
