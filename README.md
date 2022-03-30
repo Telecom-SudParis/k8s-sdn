@@ -227,10 +227,12 @@ $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/m
 
 See the instruction in Google Drive for more details.
 
-[whatever]: 1/ Access the Port Stats web app, then take the screenshot of the current number of packets.
+<!--
+1/ Access the Port Stats web app, then take the screenshot of the current number of packets.
 
 2/ Go back to Mininet and perform the pingall several times
 
 3/ Wait a few minutes, refresh the Port Stats webpage, then take another screenshot on the updated packets
 
 4/ Provide your TWO screenshots
+-->
