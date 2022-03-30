@@ -33,7 +33,7 @@ minikube ip
 ```
 By default, the IP address is **192.168.49.2** or **192.168.99.100**
 
-Create new namespace (if necessary):
+Create a new namespace (if necessary) (i.e. --namespace=dev):
 ```
 $ minikube kubectl -- create namespace dev
 ```
