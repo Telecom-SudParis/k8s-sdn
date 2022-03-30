@@ -100,7 +100,7 @@ OR
 $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/master/templates/deployment/k8s-depl-onos.yaml
 ```
 
-## Create ONOS SDN controller Serivce <a name="svc-onos"></a>
+## Create ONOS SDN controller Service <a name="svc-onos"></a>
 Copy the content from templates/service/k8s-svc-onos.yaml to K8s dashboard
 OR
 ```
