@@ -27,6 +27,18 @@ Super user terminal
 #
 ```
 
+**OPTIONAL: Delete the old Minikube cluster. Although it's not mandatory, it's a good practice to start your cluster from scratch.**
+
+```
+$ minikube delete
+```
+
+Start your Minikube 
+
+```
+$ minikube start
+```
+
 Make sure to check the IP address of the minikube VM by executing the following commands:
 ```
 minikube ip
