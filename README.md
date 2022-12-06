@@ -141,6 +141,7 @@ $ kubectl create -f https://raw.githubusercontent.com/Telecom-SudParis/k8s-sdn/m
 ```
 
 **Verify that you can access the ONOS prompt via SSH**
+
 **NOTE for M1/M2 ARM-based VM: Wait 3-4 minutes for the container to completely up before performing ssh**
 ```
 $ ssh -p 30101 -o UserKnownHostsFile=/dev/null karaf@<minikube_ip>
