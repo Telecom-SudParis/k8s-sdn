@@ -42,11 +42,11 @@ def myNetwork():
                       port=ONOS_PORT)
 
     info( '*** Add switches\n')
-    s4 = net.addSwitch('s4', cls=OVSKernelSwitch)
-    s1 = net.addSwitch('s1', cls=OVSKernelSwitch)
-    s5 = net.addSwitch('s5', cls=OVSKernelSwitch)
-    s2 = net.addSwitch('s2', cls=OVSKernelSwitch)
-    s3 = net.addSwitch('s3', cls=OVSKernelSwitch)
+    s4 = net.addSwitch('s4', cls=OVSKernelSwitch, protocols="OpenFlow14")
+    s1 = net.addSwitch('s1', cls=OVSKernelSwitch, protocols="OpenFlow14")
+    s5 = net.addSwitch('s5', cls=OVSKernelSwitch, protocols="OpenFlow14")
+    s2 = net.addSwitch('s2', cls=OVSKernelSwitch, protocols="OpenFlow14")
+    s3 = net.addSwitch('s3', cls=OVSKernelSwitch, protocols="OpenFlow14")
 
     info( '*** Add hosts\n')
     h5 = net.addHost('h5', cls=Host, ip='10.0.0.5', defaultRoute=None)
