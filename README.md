@@ -3,7 +3,11 @@ This tutorial will help you to understand the capabilities of Kubernetes in cont
 
 ## Prerequisite:
 
-**TO AVOID LOW DISK SPACE ISSUE, PLEASE RESTART YOUR VM ONCE YOU HAVE FINISHED YOUR SDN TUTORIAL**
+**TO AVOID LOW DISK SPACE ISSUE, PLEASE REMOVE THE ONOS CONTAINER ONCE YOU HAVE FINISHED YOUR SDN TUTORIAL**
+
+```
+# docker rm -f onos-1
+```
 
 You need to be able to run the onos-minikube VM (~ 6Gb), which can be downloaded from this link https://drive.google.com/file/d/1YdBudFsxGDuLT-P8Phf3sI0dGd_sH4mj/view?usp=sharing
 
