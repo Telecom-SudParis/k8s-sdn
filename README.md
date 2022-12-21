@@ -8,6 +8,28 @@ This tutorial will help you to understand the capabilities of Kubernetes in cont
 ```
 # docker rm -f onos-1
 ```
+**Delete the Minikube container (if any)**
+
+```
+$ minikube delete
+```
+
+**Remove the obsolete minikube version v1.15**
+
+```
+$ sudo dpkg --purge minikube
+```
+
+**Download the new version of Minikube v1.21**
+
+```
+curl -LO https://storage.googleapis.com/minikube/releases/v1.21.0/minikube_latest_amd64.deb
+```
+
+**Install  Minikube v1.21**
+```
+sudo dpkg -i minikube_latest_amd64.deb
+```
 
 You need to be able to run the onos-minikube VM (~ 6Gb), which can be downloaded from this link https://drive.google.com/file/d/1YdBudFsxGDuLT-P8Phf3sI0dGd_sH4mj/view?usp=sharing
 
