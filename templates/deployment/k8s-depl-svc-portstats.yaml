@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: portstats-app
-        image: tqhuy812/portstats-app
+        image: tqhuy812/portstats-app:v2
         stdin: true
         tty: true
         env:
