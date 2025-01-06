@@ -85,7 +85,7 @@ To enable Kubernetes Dashboard, enter the command below in another terminal:
 $ minikube dashboard
 ```
 
-## 00. [Docker quickstart] Create a Docker image and Run a Docker container for Port Statistics application:
+## 0.1 [Docker quickstart] Create a Docker image and Run a Docker container for Port Statistics application:
 1/ Navigate to /home/sdn/portstats-app:
 
 ```
@@ -103,6 +103,14 @@ $ docker build --tag portstats-app .
 ```
 $ docker run  -it --name ps-app portstats-app
 ```
+## 02. [docker-compose] How to install docker-compose v2
+
+```
+sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+
 
 ## Table of contents
 0. [How to create K8s components (i.e. Deployment, Service)](#how-to)
